@@ -317,10 +317,7 @@ public class HGSGameFrame extends JFrame {
 			// 判断是否吃到食物。
 			if (x == foodx && y == foody) {
 				HGSUtil.play(foodtype + 9);
-				if (foodtype + 9 == 10) {
-					score += 100;
-				} else
-					score++;
+				score++;
 				eat = true;
 				food();
 			}
