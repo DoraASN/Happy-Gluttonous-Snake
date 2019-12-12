@@ -25,18 +25,18 @@ public class HGSGameFrame extends JFrame {
 		super.setVisible(true);
 		super.addKeyListener(new HGSKeyListener());
 		HGSListener hgslistener = new HGSListener();
-		// µã»÷¹¦ÄÜ¡£
+		// ç‚¹å‡»åŠŸèƒ½ã€‚
 		this.addMouseListener(hgslistener);
-		// °´Å¥Ìø¶¯¹¦ÄÜ¡£
+		// æŒ‰é’®è·³åŠ¨åŠŸèƒ½ã€‚
 		this.addMouseMotionListener(hgslistener);
 		HGSUtil.dragFrame(this);
 	}
 
 	public static class HGSGamePanel extends JPanel {
-		// ÓÎÏ·Ãæ°å¡£20ĞĞ£¬36ÁĞ¡£
+		// æ¸¸æˆé¢æ¿ã€‚20è¡Œï¼Œ36åˆ—ã€‚
 		private static ArrayList<String> body, wall;
 		private static int x, y;
-		// 0¡¢1¡¢2¡¢3£ºÉÏ¡¢ÏÂ¡¢×ó¡¢ÓÒ¡£
+		// 0ã€1ã€2ã€3ï¼šä¸Šã€ä¸‹ã€å·¦ã€å³ã€‚
 		private static int direction, directionlock;
 		private static int speed;
 		private static int time;
@@ -75,7 +75,7 @@ public class HGSGameFrame extends JFrame {
 			body.add("70:41");
 			body.add("100:41");
 
-			// ÉßÒÆ¶¯£¬¼ÆÊ±¿ªÊ¼¡¢Í¶Ê³¡£
+			// è›‡ç§»åŠ¨ï¼Œè®¡æ—¶å¼€å§‹ã€æŠ•é£Ÿã€‚
 			move();
 			time();
 		}
@@ -83,9 +83,9 @@ public class HGSGameFrame extends JFrame {
 		@Override
 		public void paint(Graphics g) {
 			super.paint(g);
-			// ±³¾°¡£
+			// èƒŒæ™¯ã€‚
 			g.drawImage(HGSUtil.gamebackground, 0, 0, 1100, 800, null);
-			// °´Å¥¡£
+			// æŒ‰é’®ã€‚
 			g.drawImage(HGSUtil.restart, 80, 650, 163, 50, null);
 			g.drawImage(HGSUtil.tomainmenu.getImage(), 80, 710, 163, 50, null);
 			g.drawImage(HGSUtil.pause, 850, 650, 163, 50, null);
@@ -99,18 +99,18 @@ public class HGSGameFrame extends JFrame {
 			} else if (button == 4) {
 				g.drawImage(HGSUtil.littlequit, 850, 715, 163, 50, null);
 			}
-			// Ê±¼ä¡¢·ÖÊı¡¢ËÙ¶È¡£
+			// æ—¶é—´ã€åˆ†æ•°ã€é€Ÿåº¦ã€‚
 			g.setFont(HGSUtil.scorefont);
-			g.drawString("·ÖÊı£º     " + score + "·Ö", 385, 675);
-			g.drawString("Ê±¼ä£º     " + time + "Ãë", 385, 718);
+			g.drawString("åˆ†æ•°ï¼š     " + score + "åˆ†", 385, 675);
+			g.drawString("æ—¶é—´ï¼š     " + time + "ç§’", 385, 718);
 			if (HGSUtil.level == 0) {
-				g.drawString("ËÙ¶È£º     " + speedform.format(1000.0 / speed) + "¸ñ/Ãë", 385, 760);
+				g.drawString("é€Ÿåº¦ï¼š     " + speedform.format(1000.0 / speed) + "æ ¼/ç§’", 385, 760);
 			} else {
-				g.drawString("ËÙ¶È£º     " + speedform.format(1000.0 / (speed - HGSUtil.level * 75)) + "¸ñ/Ãë", 385, 760);
+				g.drawString("é€Ÿåº¦ï¼š     " + speedform.format(1000.0 / (speed - HGSUtil.level * 75)) + "æ ¼/ç§’", 385, 760);
 			}
-			// ¸ù¾İ¹Ø¿¨»­Ç½¡£
+			// æ ¹æ®å…³å¡ç”»å¢™ã€‚
 			if (HGSUtil.level > 0) {
-				// Ìí¼ÓÇ½¡£
+				// æ·»åŠ å¢™ã€‚
 				wall();
 				for (int i = 0; i < wall.size() - 1; i++) {
 					int wallx, wally;
@@ -121,7 +121,7 @@ public class HGSGameFrame extends JFrame {
 				}
 			}
 			g.drawImage(HGSUtil.food[foodtype], foodx, foody, 30, 30, null);
-			// »­Õ¨µ¯¡£
+			// ç”»ç‚¸å¼¹ã€‚
 			if (HGSUtil.level > 1) {
 				g.drawImage(HGSUtil.bomb, bombx, bomby, 30, 30, null);
 			}
@@ -131,15 +131,15 @@ public class HGSGameFrame extends JFrame {
 				g.drawImage(HGSUtil.body, 70, 41, 30, 30, null);
 				g.drawImage(HGSUtil.head[3], 100, 41, 30, 30, null);
 			} else {
-				// »­ÉßÍ·¡£
-				// »­ÉßÉíÌå¡£
+				// ç”»è›‡å¤´ã€‚
+				// ç”»è›‡èº«ä½“ã€‚
 				for (int i = 0; i < body.size() - 1; i++) {
 					int bodyx, bodyy;
 					strs = body.get(i).split(":");
 					bodyx = Integer.parseInt(strs[strs.length - 2]);
 					bodyy = Integer.parseInt(strs[strs.length - 1]);
 					g.drawImage(HGSUtil.body, bodyx, bodyy, 30, 30, null);
-					// ÅĞ¶ÏÊÇ·ñÅöµ½×Ô¼ºÉíÌå¡£
+					// åˆ¤æ–­æ˜¯å¦ç¢°åˆ°è‡ªå·±èº«ä½“ã€‚
 					if ((x == bodyx && y == bodyy && !lose)) {
 						HGSUtil.play(5);
 						lose();
@@ -183,7 +183,7 @@ public class HGSGameFrame extends JFrame {
 								sleep(speed);
 //								}
 							} else
-								// 1£º75£¬2£º150£¬3£»225¡£
+								// 1ï¼š75ï¼Œ2ï¼š150ï¼Œ3ï¼›225ã€‚
 								sleep(speed - HGSUtil.level * 75);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
@@ -199,7 +199,7 @@ public class HGSGameFrame extends JFrame {
 				public void run() {
 					while (quit) {
 						if (k) {
-							// ¼ÆÊ±£¬µ±5ÃëÊ±Ôö¼ÓÕ¨µ¯¡£
+							// è®¡æ—¶ï¼Œå½“5ç§’æ—¶å¢åŠ ç‚¸å¼¹ã€‚
 							if (HGSUtil.level >= 2) {
 								timer++;
 								if (HGSUtil.level == 2 && timer == 5) {
@@ -222,10 +222,10 @@ public class HGSGameFrame extends JFrame {
 			}.start();
 		}
 
-		// ¸ù¾İ²»Í¬µÄ¹Ø¿¨Éú³ÉÇ½µÄ¼¯ºÏ¡£
+		// æ ¹æ®ä¸åŒçš„å…³å¡ç”Ÿæˆå¢™çš„é›†åˆã€‚
 		private void wall() {
-			// ÅĞ¶Ï¹Ø¿¨¡£
-			// µÚÈı¹ØÌí¼ÓÃÔ¹¬¡£
+			// åˆ¤æ–­å…³å¡ã€‚
+			// ç¬¬ä¸‰å…³æ·»åŠ è¿·å®«ã€‚
 			if (HGSUtil.level == 3) {
 				if (HGSUtil.level == 3) {
 					wall.add((2 * 30 + 10) + ":" + (11 + 2 * 30));
@@ -272,13 +272,13 @@ public class HGSGameFrame extends JFrame {
 					}
 				}
 			} else if (HGSUtil.level > 0) {
-				// Ìí¼ÓºáÏòµÄÇ½¡£
+				// æ·»åŠ æ¨ªå‘çš„å¢™ã€‚
 				for (int i = 0; i < 2; i++) {
 					for (int j = 0; j < 36; j++) {
 						wall.add((j * 30 + 10) + ":" + (11 + i * 570));
 					}
 				}
-				// Ìí¼ÓÊúÏòµÄÇ½¡£
+				// æ·»åŠ ç«–å‘çš„å¢™ã€‚
 				for (int i = 0; i < 2; i++) {
 					for (int j = 0; j < 20; j++) {
 						wall.add((10 + i * 1050) + ":" + (j * 30 + 11));
@@ -287,7 +287,7 @@ public class HGSGameFrame extends JFrame {
 			}
 		}
 
-		// Ëæ»úÍ¶Ê³¹¦ÄÜ¡£
+		// éšæœºæŠ•é£ŸåŠŸèƒ½ã€‚
 		private void food() {
 			foodtype = (int) (Math.random() * HGSUtil.food.length);
 			if (HGSUtil.level == 0) {
@@ -303,7 +303,7 @@ public class HGSGameFrame extends JFrame {
 			}
 		}
 
-		// ³õÊ¼»¯Õ¨µ¯¡£
+		// åˆå§‹åŒ–ç‚¸å¼¹ã€‚
 		private void bomb() {
 			do {
 				bombx = 10 + (int) (Math.random() * 36) * 30;
@@ -312,25 +312,25 @@ public class HGSGameFrame extends JFrame {
 					|| wall.contains(bombx + ":" + bomby));
 		}
 
-		// ÅĞ¶ÏÊÇ·ñ³Ôµ½Ê³Îï²¢¿ØÖÆÉíÌåÊÇ·ñÔö¼Ó³¤¶È£¬ÊÇ·ñ³Ôµ½Õ¨µ¯£¬ÊÇ·ñ³Ôµ½Ç½¡£
+		// åˆ¤æ–­æ˜¯å¦åƒåˆ°é£Ÿç‰©å¹¶æ§åˆ¶èº«ä½“æ˜¯å¦å¢åŠ é•¿åº¦ï¼Œæ˜¯å¦åƒåˆ°ç‚¸å¼¹ï¼Œæ˜¯å¦åƒåˆ°å¢™ã€‚
 		private void eat() {
-			// ÅĞ¶ÏÊÇ·ñ³Ôµ½Ê³Îï¡£
+			// åˆ¤æ–­æ˜¯å¦åƒåˆ°é£Ÿç‰©ã€‚
 			if (x == foodx && y == foody) {
 				HGSUtil.play(foodtype + 9);
 				score++;
 				eat = true;
 				food();
 			}
-			// ÅĞ¶ÏÊÇ·ñÔö¼ÓÉíÌå³¤¶È¡£
+			// åˆ¤æ–­æ˜¯å¦å¢åŠ èº«ä½“é•¿åº¦ã€‚
 			if (!eat && !start) {
 				body.remove(0);
 			}
-			// ÅĞ¶ÏÊÇ·ñ³Ôµ½Õ¨µ¯¡£
+			// åˆ¤æ–­æ˜¯å¦åƒåˆ°ç‚¸å¼¹ã€‚
 			if (HGSUtil.level > 1 && x == bombx && y == bomby && !lose) {
 				HGSUtil.play(6);
 				lose();
 			}
-			// ÅĞ¶ÏÊÇ·ñ³Ôµ½Ç½¡£
+			// åˆ¤æ–­æ˜¯å¦åƒåˆ°å¢™ã€‚
 			if (HGSUtil.level > 0) {
 				for (int i = 0; i < wall.size() - 1; i++) {
 					int wallx, wally;
@@ -346,7 +346,7 @@ public class HGSGameFrame extends JFrame {
 			}
 		}
 
-		// ÅĞ¶ÏÊ§°Ü¡£
+		// åˆ¤æ–­å¤±è´¥ã€‚
 		private void lose() {
 			k = false;
 			lose = true;
@@ -356,7 +356,7 @@ public class HGSGameFrame extends JFrame {
 			HGSUtil.updateRecord(time, score);
 		}
 
-		// ÖØĞÂ¿ªÊ¼¡£
+		// é‡æ–°å¼€å§‹ã€‚
 		public static void restart() {
 			pause = false;
 			direction = 3;
@@ -385,7 +385,7 @@ public class HGSGameFrame extends JFrame {
 		}
 	}
 
-	// Êó±ê¼àÌıÆ÷¡£
+	// é¼ æ ‡ç›‘å¬å™¨ã€‚
 	public class HGSListener extends MouseAdapter {
 
 		@Override
@@ -433,7 +433,7 @@ public class HGSGameFrame extends JFrame {
 		}
 	}
 
-	// °´¼ü¼àÌıÆ÷¡£
+	// æŒ‰é”®ç›‘å¬å™¨ã€‚
 	private class HGSKeyListener extends KeyAdapter {
 		@Override
 		public void keyPressed(KeyEvent e) {
@@ -441,7 +441,7 @@ public class HGSGameFrame extends JFrame {
 			HGSGamePanel.start = false;
 			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 				if (HGSUtil.level == 0) {
-//					 1£º75£¬2£º150£¬3£»225¡£
+//					 1ï¼š75ï¼Œ2ï¼š150ï¼Œ3ï¼›225ã€‚
 					HGSGamePanel.speed = 50;
 				} else if (HGSUtil.level == 1) {
 					HGSGamePanel.speed = 115;

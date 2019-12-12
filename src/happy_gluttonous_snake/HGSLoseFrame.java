@@ -31,13 +31,13 @@ public class HGSLoseFrame extends JFrame {
 		super.add(background);
 		super.setResizable(false);
 		super.setUndecorated(true);
-		// Ìí¼Ó¼àÌıÆ÷¡£
+		// æ·»åŠ ç›‘å¬å™¨ã€‚
 		listener = new HGSListener();
 		but1.addMouseListener(listener);
 		but2.addMouseListener(listener);
 		but3.addMouseListener(listener);
 		but4.addMouseListener(listener);
-		// Ôö¼ÓÍÏ×§¹¦ÄÜ¡£
+		// å¢åŠ æ‹–æ‹½åŠŸèƒ½ã€‚
 		HGSUtil.dragFrame(this);
 	}
 

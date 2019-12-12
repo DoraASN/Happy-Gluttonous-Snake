@@ -15,9 +15,9 @@ public class HGSAdventureMenu extends JFrame {
 	public HGSAdventureMenu(HGSMainMenu hgsMainMenu) {
 		super();
 		this.hgsMainMenu = hgsMainMenu;
-		// Ö÷²Ëµ¥±³¾°¡£
+		// ä¸»èœå•èƒŒæ™¯ã€‚
 		adventurebackground = new JLabel(HGSUtil.adventurebackground);
-		// °´Å¥¡£
+		// æŒ‰é’®ã€‚
 		firstpass = HGSUtil.button(HGSUtil.firstpass, 400 / 2 - 141 / 2, 100, 141, 65, false);
 		adventurebackground.add(firstpass);
 		secondpass = HGSUtil.button(HGSUtil.secondpass, 400 / 2 - 141 / 2, 220, 141, 65, false);
@@ -26,20 +26,20 @@ public class HGSAdventureMenu extends JFrame {
 		adventurebackground.add(thirdpass);
 		tomainmenu = HGSUtil.button(HGSUtil.tomainmenu, 400 / 2 - 163 / 2, 500, 163, 50, false);
 		adventurebackground.add(tomainmenu);
-		// ÉèÖÃ¿ò¼Ü¸ñÊ½¡£
+		// è®¾ç½®æ¡†æ¶æ ¼å¼ã€‚
 		super.add(adventurebackground);
 		super.setSize(400, 600);
 		super.setLocationRelativeTo(null);
 		super.setIconImage(HGSUtil.tubiao.getImage());
 		super.setUndecorated(true);
 		super.setVisible(true);
-		// Ìí¼Ó¼àÌıÆ÷¡£
+		// æ·»åŠ ç›‘å¬å™¨ã€‚
 		HGSListener listener = new HGSListener();
 		firstpass.addMouseListener(listener);
 		secondpass.addMouseListener(listener);
 		thirdpass.addMouseListener(listener);
 		tomainmenu.addMouseListener(listener);
-		// Ôö¼ÓÍÏ×§¹¦ÄÜ¡£
+		// å¢åŠ æ‹–æ‹½åŠŸèƒ½ã€‚
 		HGSUtil.dragFrame(this);
 	}
 

@@ -8,10 +8,10 @@ import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
 public class HGSMainMenu extends JFrame {
-	// ÓÎÏ·±êÌâ¡£
+	// æ¸¸æˆæ ‡é¢˜ã€‚
 	private JLabel menubackground;
-	// ¶¨Òå¿ªÊ¼½çÃæ°´Å¥£¬¾­µäÄ£Ê½¡¢Ã°ÏÕÄ£Ê½¡¢ÅÅĞĞ°ñ¡¢¹ØÓÚÓÎÏ·¡¢ÍË³öÓÎÏ·¡¢ÒôÀÖ¡¢ÒôĞ§¡£
-	// ¹ØÓÚÓÎÏ·£º·½Ïò¼ü¿ØÖÆ·½Ïò£¬¿Õ¸ñ¼ü¼ÓËÙ£¬P¼üÔİÍ££¬³¤°´E¿É×Ô¶¯¼Ó³¤¡£
+	// å®šä¹‰å¼€å§‹ç•Œé¢æŒ‰é’®ï¼Œç»å…¸æ¨¡å¼ã€å†’é™©æ¨¡å¼ã€æ’è¡Œæ¦œã€å…³äºæ¸¸æˆã€é€€å‡ºæ¸¸æˆã€éŸ³ä¹ã€éŸ³æ•ˆã€‚
+	// å…³äºæ¸¸æˆï¼šæ–¹å‘é”®æ§åˆ¶æ–¹å‘ï¼Œç©ºæ ¼é”®åŠ é€Ÿï¼ŒPé”®æš‚åœï¼Œé•¿æŒ‰Eå¯è‡ªåŠ¨åŠ é•¿ã€‚
 	private JButton classics, adventure, ranking, about, quit, music, sound;
 //	private boolean unlock;
 
@@ -20,9 +20,9 @@ public class HGSMainMenu extends JFrame {
 //		unlock = false;
 		HGSUtil.mode = 0;
 		HGSUtil.level = 0;
-		// Ö÷²Ëµ¥±³¾°¡£
+		// ä¸»èœå•èƒŒæ™¯ã€‚
 		menubackground = new JLabel(HGSUtil.menubackground);
-		// ¾­µäÄ£Ê½°´Å¥¡£
+		// ç»å…¸æ¨¡å¼æŒ‰é’®ã€‚
 		classics = HGSUtil.button(HGSUtil.classics, 557 / 2 - 225 / 2, 280, 230, 72, false);
 		menubackground.add(classics);
 		adventure = HGSUtil.button(HGSUtil.adventure, 557 / 2 - 225 / 2, 360, 230, 72, false);
@@ -49,7 +49,7 @@ public class HGSMainMenu extends JFrame {
 		super.setIconImage(HGSUtil.tubiao.getImage());
 		super.setUndecorated(true);
 		super.setVisible(true);
-		// Ìí¼Ó¼àÌıÆ÷¡£
+		// æ·»åŠ ç›‘å¬å™¨ã€‚
 		HGSListener listener = new HGSListener();
 		classics.addMouseListener(listener);
 		adventure.addMouseListener(listener);
@@ -58,7 +58,7 @@ public class HGSMainMenu extends JFrame {
 		quit.addMouseListener(listener);
 		music.addMouseListener(listener);
 		sound.addMouseListener(listener);
-		// ÍÏ×§¡£
+		// æ‹–æ‹½ã€‚
 		HGSUtil.dragFrame(this);
 	}
 
@@ -68,7 +68,7 @@ public class HGSMainMenu extends JFrame {
 		public void mouseClicked(MouseEvent e) {
 			super.mouseClicked(e);
 			if (e.getSource() == classics) {
-				// ²¥·ÅÒôÀÖ
+				// æ’­æ”¾éŸ³ä¹
 				HGSUtil.close();
 				HGSUtil.loop(1);
 
@@ -92,13 +92,13 @@ public class HGSMainMenu extends JFrame {
 			} else if (e.getSource() == quit) {
 				System.exit(0);
 			} else if (e.getSource() == music) {
-				// ¹Ø±ÕÒôÀÖ
+				// å…³é—­éŸ³ä¹
 				if (HGSUtil.musicsw) {
 					HGSUtil.close();
 					HGSUtil.musicsw = false;
 					HGSUtil.mute = true;
 					music.setIcon(HGSUtil.nomusic);
-				} else {// ´ò¿ªÒôÀÖ
+				} else {// æ‰“å¼€éŸ³ä¹
 					HGSUtil.musicsw = true;
 					HGSUtil.mute = false;
 					HGSUtil.close();
@@ -107,11 +107,11 @@ public class HGSMainMenu extends JFrame {
 				}
 
 			} else if (e.getSource() == sound) {
-				// ¹Ø±ÕÒôĞ§
+				// å…³é—­éŸ³æ•ˆ
 				if (HGSUtil.soundsw) {
 					HGSUtil.soundsw = false;
 					sound.setIcon(HGSUtil.nosound);
-				} else {// ´ò¿ªÒôÀÖ
+				} else {// æ‰“å¼€éŸ³ä¹
 					HGSUtil.soundsw = true;
 					sound.setIcon(HGSUtil.sound);
 				}

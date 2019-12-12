@@ -19,30 +19,30 @@ public class HGSAboutMenu extends JFrame {
 		jb = HGSUtil.button(HGSUtil.aboutconfirm, 671 / 2 - 50, 750, 100, 46, false);
 		bg.add(jb);
 
-		jl = new JLabel("<html>ÓÎÏ·½éÉÜ</html>");
+		jl = new JLabel("<html>æ¸¸æˆä»‹ç»</html>");
 		jl.setFont(HGSUtil.abouttitlemenufont);
 		jl.setBounds(671 / 2 - 470 / 2, 60, 470, 37);
 		bg.add(jl);
 		jl = new JLabel(
-				"<html>±¾ÓÎÏ·Ô´ÓÚ¾­µäĞ¡ÓÎÏ·¡¶Ì°³ÔÉß¡·£¬²¢ÔÚ´Ë»ù´¡ÉÏ½øĞĞÁËÒ»¶¨µÄ¹æÔò¸Ä±ä£¬Ê¹µÃÍæ·¨¸ü¼Ó·á¸»¡£¾ßÌåÈçÏÂ£º<br><U>¾­µäÄ£Ê½</U>ÖĞ»ù´¡ËÙ¶È»áËæ×ÅÊ±¼äµÄÍÆÒÆÔ½À´Ô½¿ì£¬¼ÓËÙËÙ¶È²»±ä»¯£»<br><U>Ã°ÏÕÄ£Ê½</U>ÖĞµÄ»ù´¡ËÙ¶ÈºÍ¼ÓËÙËÙ¶ÈÃ¿¸ö¹Ø¿¨²»Í¬£¬ÆäÖĞ¹Ø¿¨Ò»×îÂı£¬¹Ø¿¨Èı×î¿ì¡£<br></html>");
+				"<html>æœ¬æ¸¸æˆæºäºç»å…¸å°æ¸¸æˆã€Šè´ªåƒè›‡ã€‹ï¼Œå¹¶åœ¨æ­¤åŸºç¡€ä¸Šè¿›è¡Œäº†ä¸€å®šçš„è§„åˆ™æ”¹å˜ï¼Œä½¿å¾—ç©æ³•æ›´åŠ ä¸°å¯Œã€‚å…·ä½“å¦‚ä¸‹ï¼š<br><U>ç»å…¸æ¨¡å¼</U>ä¸­åŸºç¡€é€Ÿåº¦ä¼šéšç€æ—¶é—´çš„æ¨ç§»è¶Šæ¥è¶Šå¿«ï¼ŒåŠ é€Ÿé€Ÿåº¦ä¸å˜åŒ–ï¼›<br><U>å†’é™©æ¨¡å¼</U>ä¸­çš„åŸºç¡€é€Ÿåº¦å’ŒåŠ é€Ÿé€Ÿåº¦æ¯ä¸ªå…³å¡ä¸åŒï¼Œå…¶ä¸­å…³å¡ä¸€æœ€æ…¢ï¼Œå…³å¡ä¸‰æœ€å¿«ã€‚<br></html>");
 		jl.setFont(HGSUtil.aboutmenufont);
 		jl.setBounds(671 / 2 - 470 / 2, 110, 470, 195);
 		bg.add(jl);
 
-		jl = new JLabel("<html>ÓÎÏ·ËµÃ÷</html>");
+		jl = new JLabel("<html>æ¸¸æˆè¯´æ˜</html>");
 		jl.setFont(HGSUtil.abouttitlemenufont);
 		jl.setBounds(671 / 2 - 470 / 2, 330, 470, 37);
 		bg.add(jl);
-		jl = new JLabel("<html><U>ÓÎÏ·²Ù×÷</U>£º·½Ïò¼ü¿ØÖÆÉßÒÆ¶¯µÄ·½Ïò£¬¿Õ¸ñ¼ü¼ÓËÙ£¬P¼üÔİÍ££¨ÓÎÏ·½çÃæµÄ¡°ÔİÍ£ÓÎÏ·¡±Í¬Ñù¿ÉÒÔÔİÍ£ÓÎÏ·£©¡£</html>");
+		jl = new JLabel("<html><U>æ¸¸æˆæ“ä½œ</U>ï¼šæ–¹å‘é”®æ§åˆ¶è›‡ç§»åŠ¨çš„æ–¹å‘ï¼Œç©ºæ ¼é”®åŠ é€Ÿï¼ŒPé”®æš‚åœï¼ˆæ¸¸æˆç•Œé¢çš„â€œæš‚åœæ¸¸æˆâ€åŒæ ·å¯ä»¥æš‚åœæ¸¸æˆï¼‰ã€‚</html>");
 		jl.setFont(HGSUtil.aboutmenufont);
 		jl.setBounds(671 / 2 - 470 / 2, 380, 460, 80);
 		bg.add(jl);
-		jl = new JLabel("<html><U>ÓÎÏ·ÉèÖÃ</U>£ºÖ÷½çÃæÓÒÏÂ½Ç¿É·Ö±ğ½øĞĞÓÎÏ·±³¾°ÒôÀÖºÍÒôĞ§µÄ¿ª¹Ø²Ù×÷¡£</html>");
+		jl = new JLabel("<html><U>æ¸¸æˆè®¾ç½®</U>ï¼šä¸»ç•Œé¢å³ä¸‹è§’å¯åˆ†åˆ«è¿›è¡Œæ¸¸æˆèƒŒæ™¯éŸ³ä¹å’ŒéŸ³æ•ˆçš„å¼€å…³æ“ä½œã€‚</html>");
 		jl.setFont(HGSUtil.aboutmenufont);
 		jl.setBounds(671 / 2 - 470 / 2, 470, 460, 55);
 		bg.add(jl);
 
-		jl = new JLabel("<html>¿ª·¢ÈËÔ±</html>");
+		jl = new JLabel("<html>å¼€å‘äººå‘˜</html>");
 		jl.setFont(HGSUtil.abouttitlemenufont);
 		jl.setBounds(671 / 2 - 470 / 2, 555, 470, 37);
 		bg.add(jl);
@@ -51,7 +51,7 @@ public class HGSAboutMenu extends JFrame {
 		jl.setBounds(671 / 2 - 470 / 2, 610, 454, 123);
 		bg.add(jl);
 
-		jl = new JLabel("2019 @×½³æĞ¡¶Ó");
+		jl = new JLabel("2019 @æ‰è™«å°é˜Ÿ");
 		jl.setFont(HGSUtil.rankingtitlefont);
 		jl.setBounds(671 - 130 - 60, 810, 130, 37);
 		bg.add(jl);
@@ -63,13 +63,13 @@ public class HGSAboutMenu extends JFrame {
 		super.setBackground(new Color(0, 0, 0, 0));
 		super.setLocationRelativeTo(null);
 		super.setVisible(true);
-		// ¼àÌıÆ÷¡£
+		// ç›‘å¬å™¨ã€‚
 		HGSListener listener = new HGSListener();
 		jb.addMouseListener(listener);
 		HGSUtil.dragFrame(this);
 	}
 
-	// Êó±ê¼àÌıÆ÷¡£
+	// é¼ æ ‡ç›‘å¬å™¨ã€‚
 	private class HGSListener extends MouseAdapter {
 
 		@Override

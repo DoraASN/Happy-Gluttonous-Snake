@@ -16,67 +16,67 @@ public class HGSList extends JFrame {
 		super();
 		listbackground = new JLabel(HGSUtil.listbackground);
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ªÅÅĞĞ°ñ¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”æ’è¡Œæ¦œâ€”â€”â€”â€”");
 		jl.setFont(HGSUtil.listfont);
 		jl.setBounds(25, 20, 500, 35);
 		listbackground.add(jl);
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
 		jl.setBounds(25, 1 * 16 + 55, 300, 4);
 		listbackground.add(jl);
 		jl = new JLabel();
-		jl.setText("Ä£Ê½ ÅÅÃû  ĞÕÃû   ·ÖÊı  Ê±¼ä");
+		jl.setText("æ¨¡å¼ æ’å  å§“å   åˆ†æ•°  æ—¶é—´");
 		jl.setFont(HGSUtil.rankingtitlefont);
 		jl.setBounds(25, 2 * 16 + 45, 300, 22);
 		listbackground.add(jl);
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
 		jl.setBounds(25, 3 * 16 + 50, 300, 4);
 		listbackground.add(jl);
 		String[] strs = new String[32];
 		strs = HGSUtil.getRecord();
 		for (int i = 0; i < 8; i++) {
 			jl = new JLabel();
-			jl.setText("¾­µä   " + (i + 1) + "  " + strs[i]);
+			jl.setText("ç»å…¸   " + (i + 1) + "  " + strs[i]);
 			jl.setFont(HGSUtil.rankingfont);
 			jl.setBounds(25, (i + 4) * 16 + 40, 300, 22);
 			listbackground.add(jl);
 		}
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
 		jl.setBounds(25, 11 * 16 + 60, 300, 4);
 		listbackground.add(jl);
 		for (int i = 0; i < 8; i++) {
 			jl = new JLabel();
-			jl.setText("Ã°ÏÕ1  " + (i + 1) + "  " + strs[8 + i]);
+			jl.setText("å†’é™©1  " + (i + 1) + "  " + strs[8 + i]);
 			jl.setFont(HGSUtil.rankingfont);
 			jl.setBounds(25, (i + 11) * 16 + 65, 300, 22);
 			listbackground.add(jl);
 		}
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
 		jl.setBounds(25, 19 * 16 + 70, 300, 4);
 		listbackground.add(jl);
 		for (int i = 0; i < 8; i++) {
 			jl = new JLabel();
-			jl.setText("Ã°ÏÕ2  " + (i + 1) + "  " + strs[16 + i]);
+			jl.setText("å†’é™©2  " + (i + 1) + "  " + strs[16 + i]);
 			jl.setFont(HGSUtil.rankingfont);
 			jl.setBounds(25, (i + 19) * 16 + 75, 300, 22);
 			listbackground.add(jl);
 		}
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
 		jl.setBounds(25, 27 * 16 + 80, 300, 4);
 		listbackground.add(jl);
 		for (int i = 0; i < 8; i++) {
 			jl = new JLabel();
-			jl.setText("Ã°ÏÕ3  " + (i + 1) + "  " + strs[24 + i]);
+			jl.setText("å†’é™©3  " + (i + 1) + "  " + strs[24 + i]);
 			jl.setFont(HGSUtil.rankingfont);
 			jl.setBounds(25, (i + 27) * 16 + 85, 300, 22);
 			listbackground.add(jl);
 		}
 		jl = new JLabel();
-		jl.setText("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+		jl.setText("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
 		jl.setBounds(25, 36 * 16 + 75, 300, 4);
 		listbackground.add(jl);
 		jl = new JLabel();
@@ -91,7 +91,7 @@ public class HGSList extends JFrame {
 		listbackground.add(confirm);
 		super.setResizable(false);
 		confirm.addMouseListener(new HGSListener());
-		// ÍÏ×§¡£
+		// æ‹–æ‹½ã€‚
 		HGSUtil.dragFrame(this);
 	}
 

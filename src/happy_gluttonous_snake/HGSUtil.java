@@ -25,7 +25,7 @@ import javax.swing.JOptionPane;
 public class HGSUtil {
 	private static int x, y;
 	private static int xp, yp;
-	// ÒôÀÖ²ÎÊı
+	// éŸ³ä¹å‚æ•°
 	public static boolean musicsw = true;
 	public static boolean soundsw = true;
 	public static boolean mute = false;
@@ -33,19 +33,19 @@ public class HGSUtil {
 	private static Clip clip2 = null;
 	private static Clip clip3 = null;
 	private static AudioInputStream audioIn = null;
-	// ¹Ø¿¨Êı¡£
-	// ÅÅĞĞ°ñ·ÖÀà£º0.¾­µäÄ£Ê½£»8.ÎŞÕ¨µ¯£¬ÓĞÎ§Ç½£»16.Ëæ»ú³öÏÖÕ¨µ¯£¬ÓĞÎ§Ç½£»24.Ëæ»ú³öÏÖÕ¨µ¯£¬ÓĞÎ§Ç½ºÍÃÔ¹¬¡£
+	// å…³å¡æ•°ã€‚
+	// æ’è¡Œæ¦œåˆ†ç±»ï¼š0.ç»å…¸æ¨¡å¼ï¼›8.æ— ç‚¸å¼¹ï¼Œæœ‰å›´å¢™ï¼›16.éšæœºå‡ºç°ç‚¸å¼¹ï¼Œæœ‰å›´å¢™ï¼›24.éšæœºå‡ºç°ç‚¸å¼¹ï¼Œæœ‰å›´å¢™å’Œè¿·å®«ã€‚
 	public static int mode;
-	// Ã°ÏÕÄ£Ê½µÄÈı¸ö¹Ø¿¨·Ö±ğ±íÊ¾Îª£º1.ÎŞÕ¨µ¯£¬ÓĞÎ§Ç½£»2.Ëæ»ú³öÏÖÕ¨µ¯£¬ÓĞÎ§Ç½£»3.Ëæ»ú³öÏÖÕ¨µ¯£¬ÓĞÎ§Ç½ºÍÃÔ¹¬¡£
+	// å†’é™©æ¨¡å¼çš„ä¸‰ä¸ªå…³å¡åˆ†åˆ«è¡¨ç¤ºä¸ºï¼š1.æ— ç‚¸å¼¹ï¼Œæœ‰å›´å¢™ï¼›2.éšæœºå‡ºç°ç‚¸å¼¹ï¼Œæœ‰å›´å¢™ï¼›3.éšæœºå‡ºç°ç‚¸å¼¹ï¼Œæœ‰å›´å¢™å’Œè¿·å®«ã€‚
 	public static int level;
-	// ×ÖÌå¡£
-	public static Font scorefont = new Font("Ó×Ô²", Font.BOLD, 30);
-	public static Font listfont = new Font("»ªÎÄĞĞ¿¬", 0, 25);
-	public static Font rankingtitlefont = new Font("¿¬Ìå", Font.BOLD, 18);
-	public static Font rankingfont = new Font("¿¬Ìå", 0, 18);
-	public static Font abouttitlemenufont = new Font("Ó×Ô²", Font.BOLD, 35);
-	public static Font aboutmenufont = new Font("Ó×Ô²", Font.BOLD, 25);
-	// Í¼Æ¬¡£
+	// å­—ä½“ã€‚
+	public static Font scorefont = new Font("å¹¼åœ†", Font.BOLD, 30);
+	public static Font listfont = new Font("åæ–‡è¡Œæ¥·", 0, 25);
+	public static Font rankingtitlefont = new Font("æ¥·ä½“", Font.BOLD, 18);
+	public static Font rankingfont = new Font("æ¥·ä½“", 0, 18);
+	public static Font abouttitlemenufont = new Font("å¹¼åœ†", Font.BOLD, 35);
+	public static Font aboutmenufont = new Font("å¹¼åœ†", Font.BOLD, 25);
+	// å›¾ç‰‡ã€‚
 	public static ImageIcon menubackground = new ImageIcon("resource/image/menubackground.png");
 	public static ImageIcon classics = new ImageIcon("resource/image/classics.png");
 	public static ImageIcon adventure = new ImageIcon("resource/image/adventure.png");
@@ -100,43 +100,43 @@ public class HGSUtil {
 			new File("resource/music/eatsound3.wav"), new File("resource/music/eatsound4.wav"),
 			new File("resource/music/eatsound5.wav") };
 
-	// ¹¹Ôì°´Å¥µÄ·½·¨¡£
+	// æ„é€ æŒ‰é’®çš„æ–¹æ³•ã€‚
 	public static JButton button(ImageIcon img, int x, int y, int width, int height, boolean rf) {
-		// Éú³ÉÒ»¸öÔ­ÉúµÄJButton¶ÔÏó¡£
+		// ç”Ÿæˆä¸€ä¸ªåŸç”Ÿçš„JButtonå¯¹è±¡ã€‚
 		JButton button = new JButton(img);
-		// °´Å¥¶ÔÏóÏÔÊ¾µÄÍ¼Æ¬Îª²ÎÊıÖĞ´«µİµÄÖµ¡£
+		// æŒ‰é’®å¯¹è±¡æ˜¾ç¤ºçš„å›¾ç‰‡ä¸ºå‚æ•°ä¸­ä¼ é€’çš„å€¼ã€‚
 		button.setBounds(x, y, width, height);
-		// °´Å¥±³¾°É«ÉèÖÃÎª²»ÏÔÊ¾£¬¼´ÎªÍ¸Ã÷±³¾°É«¡£
+		// æŒ‰é’®èƒŒæ™¯è‰²è®¾ç½®ä¸ºä¸æ˜¾ç¤ºï¼Œå³ä¸ºé€æ˜èƒŒæ™¯è‰²ã€‚
 		button.setContentAreaFilled(rf);
-		// ²»»æÖÆ°´Å¥µÄ±ß¿ò¡£
+		// ä¸ç»˜åˆ¶æŒ‰é’®çš„è¾¹æ¡†ã€‚
 		button.setBorderPainted(rf);
-		// ²»»æÖÆ°´Å¥ÔÚ½¹µã×´Ì¬ÏÂµÄĞ§¹û¡£
+		// ä¸ç»˜åˆ¶æŒ‰é’®åœ¨ç„¦ç‚¹çŠ¶æ€ä¸‹çš„æ•ˆæœã€‚
 		button.setFocusable(false);
 		return button;
 	}
 
 	public static void dragFrame(final JFrame jf) {
 
-		// ¼àÌıÊó±êÊÂ¼ş£¬ÖØĞ´°´ÏÂÊÂ¼şµÄ·½·¨¡£
+		// ç›‘å¬é¼ æ ‡äº‹ä»¶ï¼Œé‡å†™æŒ‰ä¸‹äº‹ä»¶çš„æ–¹æ³•ã€‚
 		jf.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				super.mousePressed(e);
-				// ¼ÇÂ¼Êó±ê°´ÏÂµÄÎ»ÖÃ¡£
+				// è®°å½•é¼ æ ‡æŒ‰ä¸‹çš„ä½ç½®ã€‚
 				xp = e.getX();
 				yp = e.getY();
 			}
 		});
 
-		// ¼àÌıÊó±êÒÆ¶¯ÊÂ¼ş£¬ÖØĞ´ÍÏ×§µÄ·½·¨¡£
+		// ç›‘å¬é¼ æ ‡ç§»åŠ¨äº‹ä»¶ï¼Œé‡å†™æ‹–æ‹½çš„æ–¹æ³•ã€‚
 		jf.addMouseMotionListener(new MouseAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
 				super.mouseDragged(e);
-				// ¼ÇÂ¼´°ÌåµÄ³õÊ¼Î»ÖÃ¡£
+				// è®°å½•çª—ä½“çš„åˆå§‹ä½ç½®ã€‚
 				x = jf.getX();
 				y = jf.getY();
-				// ¼ÇÂ¼Êó±êÒÆ¶¯ºóµÄ¼´Ê±Î»ÖÃ¡£
+				// è®°å½•é¼ æ ‡ç§»åŠ¨åçš„å³æ—¶ä½ç½®ã€‚
 				int x1 = e.getX();
 				int y1 = e.getY();
 				jf.setLocation(x + (x1 - xp), y + (y1 - yp));
@@ -144,7 +144,7 @@ public class HGSUtil {
 		});
 	}
 
-	// »ñÈ¡ÅÅĞĞ°ñÎÄ¼şÄÚÈİ²¢Êä³ö¡£
+	// è·å–æ’è¡Œæ¦œæ–‡ä»¶å†…å®¹å¹¶è¾“å‡ºã€‚
 	public static String[] getRecord() {
 		BufferedReader br = null;
 		String[] strs = new String[32];
@@ -172,7 +172,7 @@ public class HGSUtil {
 		return strs;
 	}
 
-	// ¸üĞÂÎÄ¼şÖĞµÄĞÅÏ¢¡£
+	// æ›´æ–°æ–‡ä»¶ä¸­çš„ä¿¡æ¯ã€‚
 	public static void setRecord(String[] strs) {
 		PrintWriter pw = null;
 		try {
@@ -193,24 +193,24 @@ public class HGSUtil {
 		}
 	}
 
-	// ¸üĞÂ¼ÇÂ¼ĞÅÏ¢²¢ÅĞ¶ÏÊÇ·ñÊÇĞÂ¼ÍÂ¼¡£
+	// æ›´æ–°è®°å½•ä¿¡æ¯å¹¶åˆ¤æ–­æ˜¯å¦æ˜¯æ–°çºªå½•ã€‚
 	public static void updateRecord(int time, int score) {
-		// ÏÈ¸üĞÂrecordÊı×é¡£
-		// ¸ù¾İlevel´ÓrecordÖĞ½ØÈ¡10¸öÔªËØ
-		// »ñÈ¡Õâ10¸öÔªËØµÄÊ±¼äĞÅÏ¢
-		// ÓÃµ±Ç°µÄtimeÖµºÍÕâÊ®¸öÊ±¼ä±È½Ï£º´ÓºóÍùÇ°±È½ÏÈç¹û±Èµ±Ç°Êı¾İĞ¡£¬¾ÍÌæ»»µ±Ç°Î»ÖÃ¡£
+		// å…ˆæ›´æ–°recordæ•°ç»„ã€‚
+		// æ ¹æ®levelä»recordä¸­æˆªå–10ä¸ªå…ƒç´ 
+		// è·å–è¿™10ä¸ªå…ƒç´ çš„æ—¶é—´ä¿¡æ¯
+		// ç”¨å½“å‰çš„timeå€¼å’Œè¿™åä¸ªæ—¶é—´æ¯”è¾ƒï¼šä»åå¾€å‰æ¯”è¾ƒå¦‚æœæ¯”å½“å‰æ•°æ®å°ï¼Œå°±æ›¿æ¢å½“å‰ä½ç½®ã€‚
 		String[] record = getRecord();
 		int i;
 		int scores, times;
 		String str;
 		String[] strs;
 		for (i = 0; i < 8; i++) {
-			// Ã»ÓĞ»ñÈ¡µ½×Ö·û´®»òÕß»ñÈ¡µ½¡°null¡±×Ö·û´®£¬ÔòÍ£Ö¹Ñ­»·¡£
+			// æ²¡æœ‰è·å–åˆ°å­—ç¬¦ä¸²æˆ–è€…è·å–åˆ°â€œnullâ€å­—ç¬¦ä¸²ï¼Œåˆ™åœæ­¢å¾ªç¯ã€‚
 			if (record[mode + i].equals("null") || record[mode + i] == null || record[mode + i].equals("")) {
 				if (i == 0) {
-					str = JOptionPane.showInputDialog("ĞÂ¼ÍÂ¼£¡ÇëÊäÈëÄúµÄÃû³Æ£º");
+					str = JOptionPane.showInputDialog("æ–°çºªå½•ï¼è¯·è¾“å…¥æ‚¨çš„åç§°ï¼š");
 					if (str == null || str.equals("")) {
-						record[mode + i] = "ÎŞÃûÊÏ" + "   " + score + "   " + time;
+						record[mode + i] = "æ— åæ°" + "   " + score + "   " + time;
 					} else if (str.length() == 2) {
 						record[mode + i] = str + "     " + score + "   " + time;
 					} else if (str.length() == 1) {
@@ -219,9 +219,9 @@ public class HGSUtil {
 						record[mode + i] = str + "   " + score + "   " + time;
 					}
 				} else {
-					str = JOptionPane.showInputDialog("µÚ" + (i + 1) + "Ãû£¡ÇëÊäÈëÄúµÄÃû³Æ£º");
+					str = JOptionPane.showInputDialog("ç¬¬" + (i + 1) + "åï¼è¯·è¾“å…¥æ‚¨çš„åç§°ï¼š");
 					if (str == null || str.equals("")) {
-						record[mode + i] = "ÎŞÃûÊÏ" + "   " + score + "   " + time;
+						record[mode + i] = "æ— åæ°" + "   " + score + "   " + time;
 					} else if (str.length() == 2) {
 						record[mode + i] = str + "     " + score + "   " + time;
 					} else if (str.length() == 1) {
@@ -232,16 +232,16 @@ public class HGSUtil {
 				}
 				break;
 			}
-			// ²ğ·Ö×Ö·û´®Îª×Ö·ûÊı×é¡£
+			// æ‹†åˆ†å­—ç¬¦ä¸²ä¸ºå­—ç¬¦æ•°ç»„ã€‚
 			strs = record[mode + i].split(" +");
 			scores = Integer.parseInt(strs[strs.length - 2]);
 			times = Integer.parseInt(strs[strs.length - 1]);
 			if (score > scores || (score == scores && time < times)) {
 				Move(i, record);
 				if (i == 0) {
-					str = JOptionPane.showInputDialog("ĞÂ¼ÍÂ¼£¡ÇëÊäÈëÄúµÄÃû³Æ£º");
+					str = JOptionPane.showInputDialog("æ–°çºªå½•ï¼è¯·è¾“å…¥æ‚¨çš„åç§°ï¼š");
 					if (str == null || str.equals("")) {
-						record[mode + i] = "ÎŞÃûÊÏ" + "   " + score + "   " + time;
+						record[mode + i] = "æ— åæ°" + "   " + score + "   " + time;
 					} else if (str.length() == 2) {
 						record[mode + i] = str + "     " + score + "   " + time;
 					} else if (str.length() == 1) {
@@ -250,9 +250,9 @@ public class HGSUtil {
 						record[mode + i] = str + "   " + score + "   " + time;
 					}
 				} else {
-					str = JOptionPane.showInputDialog("µÚ" + (i + 1) + "Ãû£¡ÇëÊäÈëÄúµÄÃû³Æ£º");
+					str = JOptionPane.showInputDialog("ç¬¬" + (i + 1) + "åï¼è¯·è¾“å…¥æ‚¨çš„åç§°ï¼š");
 					if (str == null || str.equals("")) {
-						record[mode + i] = "ÎŞÃûÊÏ" + "   " + score + "   " + time;
+						record[mode + i] = "æ— åæ°" + "   " + score + "   " + time;
 					} else if (str.length() == 2) {
 						record[mode + i] = str + "     " + score + "   " + time;
 					} else if (str.length() == 1) {
@@ -268,9 +268,9 @@ public class HGSUtil {
 				scores = Integer.parseInt(strs[strs.length - 1]);
 				if (score != scores) {
 					Move(i + 1, record);
-					str = JOptionPane.showInputDialog("µÚ" + (i + 1) + "Ãû£¡ÇëÊäÈëÄúµÄÃû³Æ£º");
+					str = JOptionPane.showInputDialog("ç¬¬" + (i + 1) + "åï¼è¯·è¾“å…¥æ‚¨çš„åç§°ï¼š");
 					if (str == null || str.equals("")) {
-						record[mode + i] = "ÎŞÃûÊÏ" + "   " + score + "   " + time;
+						record[mode + i] = "æ— åæ°" + "   " + score + "   " + time;
 					} else if (str.length() == 2) {
 						record[mode + i] = str + "     " + score + "   " + time;
 					} else if (str.length() == 1) {
@@ -285,7 +285,7 @@ public class HGSUtil {
 		HGSUtil.setRecord(record);
 	}
 
-	// ½«µ±Ç°µÄÎ»´ÎÉÏµÄĞÅÏ¢ÒÔ¼°ºóÃæµÄĞÅÏ¢ÏòºóÒÆ¶¯Ò»Î»¡£
+	// å°†å½“å‰çš„ä½æ¬¡ä¸Šçš„ä¿¡æ¯ä»¥åŠåé¢çš„ä¿¡æ¯å‘åç§»åŠ¨ä¸€ä½ã€‚
 	private static void Move(int i, String[] record) {
 		for (int x = 6; x > i; x--) {
 			if (record[mode + x - 1].equals("null") || record[mode + x - 1] == null || record[mode + x - 1].equals(""))
@@ -296,16 +296,16 @@ public class HGSUtil {
 		HGSUtil.setRecord(record);
 	}
 
-	// ²¥·ÅÒôÀÖ¡£
+	// æ’­æ”¾éŸ³ä¹ã€‚
 	public static void play(int musictype) {
 		try {
-			// 1,ÒôÆµÊäÈëÁ÷¼ÓÔØÊı¾İ
+			// 1,éŸ³é¢‘è¾“å…¥æµåŠ è½½æ•°æ®
 			audioIn = AudioSystem.getAudioInputStream(musicfile[musictype]);
-			// 2¡¢Êı¾İĞĞ
+			// 2ã€æ•°æ®è¡Œ
 			clip2 = AudioSystem.getClip();
-			// 3¡¢¿ªÆôÊı¾İĞĞ£¬½ÓÈëÊäÈëÁ÷
+			// 3ã€å¼€å¯æ•°æ®è¡Œï¼Œæ¥å…¥è¾“å…¥æµ
 			clip2.open(audioIn);
-			// 4¡¢¿ªÊ¼²¥·ÅÉùÒô---ÒÔºóÌ¨Ïß³ÌµÄ·½Ê½²¥·Å
+			// 4ã€å¼€å§‹æ’­æ”¾å£°éŸ³---ä»¥åå°çº¿ç¨‹çš„æ–¹å¼æ’­æ”¾
 			if (soundsw) {
 				clip2.start();
 			}
@@ -320,13 +320,13 @@ public class HGSUtil {
 
 	public static void play(int musictype, int musictype1) {
 		try {
-			// 1,ÒôÆµÊäÈëÁ÷¼ÓÔØÊı¾İ
+			// 1,éŸ³é¢‘è¾“å…¥æµåŠ è½½æ•°æ®
 			audioIn = AudioSystem.getAudioInputStream(musicfile[musictype]);
-			// 2¡¢Êı¾İĞĞ
+			// 2ã€æ•°æ®è¡Œ
 			clip3 = AudioSystem.getClip();
-			// 3¡¢¿ªÆôÊı¾İĞĞ£¬½ÓÈëÊäÈëÁ÷
+			// 3ã€å¼€å¯æ•°æ®è¡Œï¼Œæ¥å…¥è¾“å…¥æµ
 			clip3.open(audioIn);
-			// 4¡¢¿ªÊ¼²¥·ÅÉùÒô---ÒÔºóÌ¨Ïß³ÌµÄ·½Ê½²¥·Å
+			// 4ã€å¼€å§‹æ’­æ”¾å£°éŸ³---ä»¥åå°çº¿ç¨‹çš„æ–¹å¼æ’­æ”¾
 			if (soundsw) {
 				clip3.start();
 			}
@@ -341,13 +341,13 @@ public class HGSUtil {
 
 	public static void loop(int musictype) {
 		try {
-			// 1,ÒôÆµÊäÈëÁ÷¼ÓÔØÊı¾İ
+			// 1,éŸ³é¢‘è¾“å…¥æµåŠ è½½æ•°æ®
 			audioIn = AudioSystem.getAudioInputStream(musicfile[musictype]);
-			// 2¡¢Êı¾İĞĞ
+			// 2ã€æ•°æ®è¡Œ
 			clip1 = AudioSystem.getClip();
-			// 3¡¢¿ªÆôÊı¾İĞĞ£¬½ÓÈëÊäÈëÁ÷
+			// 3ã€å¼€å¯æ•°æ®è¡Œï¼Œæ¥å…¥è¾“å…¥æµ
 			clip1.open(audioIn);
-			// 4¡¢Ñ­»·²¥·ÅÉùÒô---ÒÔºóÌ¨Ïß³ÌµÄ·½Ê½²¥·Å
+			// 4ã€å¾ªç¯æ’­æ”¾å£°éŸ³---ä»¥åå°çº¿ç¨‹çš„æ–¹å¼æ’­æ”¾
 			if (musicsw) {
 				clip1.loop(Clip.LOOP_CONTINUOUSLY);
 			}
